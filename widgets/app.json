@@ -1,6 +1,6 @@
 {
   "pages": [
-
+    "pages/test2/test2",
     "pages/test/test",
     "pages/refresh_more/refresh_more",
     "pages/index/index",

@@ -1,11 +1,6 @@
 <!--pages/test/test.wxml-->
-<refresh_more
-url="{{url}}"
-bind:loadmore="loadmore"
-bind:refresh="refresh"
-bind:first_load="first_load"
->
-<view slot='content' >
-  <view style="height:20vw;margin-top:5vw;width:100%;" wx:for="{{list}}" wx:key="key">{{item.tagName}}</view>
-</view>
+<refresh_more url="{{url}}" bind:loadmore="loadmore" bind:refresh="refresh" bind:first_load="first_load">
+  <view slot='content'>
+    <view style="height:20vw;margin-top:5vw;width:100%;" wx:for="{{list}}" wx:key="key">{{item.tagName}}</view>
+  </view>
 </refresh_more>

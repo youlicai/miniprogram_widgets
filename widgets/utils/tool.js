@@ -1,4 +1,4 @@
-var host = "https://www.baidu.com";
+var host = "http://47.101.11.109:8008";
 function get(action, req_data, doSucc, doFail, doComplete) {
   if (!(req_data == '' || req_data == null)) {
     try {
@@ -30,7 +30,7 @@ function get(action, req_data, doSucc, doFail, doComplete) {
     success: function (res) {
       console.log(res.data);
       if (res.data.code == 0) {
-        if (res.data.rows != null && res.data.rows.length == 0) {
+        if (res.data.rows == null) {
           doFail('未找到相关数据！');
         } else {
           doSucc(res.data);
@@ -129,10 +129,38 @@ function getbackdata(){
   }
   return currPage.data.backdata;
 }
+
+function setStorageSync(key,value){
+  try {
+    wx.setStorageSync(key, value)
+  } catch (e) { 
+    console.log("setStorageSync fail");
+  }
+}
+
+function getStorageSync(key){
+  var value;
+  try {
+    value = wx.getStorageSync(key)
+  } catch (e) {
+    value='';
+  }
+  return value;
+}
+
+function removeStorageSync(key){
+  try {
+    wx.removeStorageSync('key')
+  } catch (e) {
+    console.log("removeStorageSync fail");
+  }
+}
 module.exports.get = get;
 module.exports.host = host;
-module.exports.getbindData = getbindData;
+module.exports.getbinddata = getbinddata;
 module.exports.forward = forward;
 module.exports.back = back;
 module.exports.getbackdata = getbackdata;
 module.exports.getforwarddata = getforwarddata;
+module.exports.setStorageSync = setStorageSync;
+module.exports.getStorageSync = getStorageSync;

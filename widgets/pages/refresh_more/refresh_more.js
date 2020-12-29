@@ -102,6 +102,7 @@ function animation(that) {
 }
 
 function loaddata(that, succ, fail, no_data) {
+  console.log("ddd");
   loadBefore(that);
   wx.request({
     url: that.properties.url + that.data._page,

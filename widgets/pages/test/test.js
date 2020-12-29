@@ -1,4 +1,5 @@
 // pages/test/test.js
+
 Page({
 
   /**
@@ -17,10 +18,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // loadData(this,'init')
-    this.setData({
-      url:"http://47.101.11.109:8008/wx/api/asset/tag/list?keywords=&pageSize=5&sign=&tagCode=&tagName=&userId=101&pageNum="
-    })
+    auth.phone(this,'','');
+    // this.setData({
+    //   url:"http://47.101.11.109:8008/wx/api/asset/tag/list?keywords=&pageSize=5&sign=&tagCode=&tagName=&userId=101&pageNum="
+    // })
 
     // this.setData({
     //   url:"eeee"
