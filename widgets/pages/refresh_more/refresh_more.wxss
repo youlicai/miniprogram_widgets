@@ -1,0 +1,54 @@
+/* pages/refresh&more/refresh&more.wxss */
+
+.scroll{
+  height:100vh;
+}
+.init{
+  height: 100%;
+  text-align: center;
+  line-height: 100vh;
+  background-color: red;
+}
+.main{
+  width: 100%;
+  height: 100%;
+}
+.info{
+  width:50vw !important;
+  margin:0 auto;
+  position: relative; /*脱离文档流*/
+  top: 30%; /*偏移*/
+  text-align: center;
+}
+.loading{
+  color:#999;
+  font-size:4vw;
+}
+.loading image{
+  width: 15vw;
+  height: 15vw;
+  margin:5vw;
+}
+
+.load_fail{
+  color:#999;
+  font-size:4vw;
+}
+.load_fail image{
+  width: 40vw !important;
+  height: 40vw;
+}
+.no_data image{
+  width: 40vw !important;
+  height: 40vw;
+}
+.no_data{
+color:#999;
+font-size:4vw;
+}
+.loadmore{
+  color:#999;
+  text-align: center;
+  padding:1vw;
+  font-size:4vw;
+}

@@ -1,0 +1,43 @@
+<scroll-view class="scroll" scroll-y="true" refresher-enabled="false" bindscrolltolower="_onLoadMore"
+  bindrefresherrefresh="_onRefresh" refresher-triggered="{{refreshfinsh}}">
+  <view class="main">
+    <block wx:if="{{load_status=='first'}}">
+      <view class="loading info">
+        <image  src="../img/searching.png" animation="{{animationData}}"/>
+        <view>搜索中...</view>
+      </view>
+    </block>
+    <block wx:if="{{load_status=='load_fail'}}">
+      <view class="load_fail info">
+        <image  src="./img/err.png"/>
+        <view>加载失败!</view>
+      </view>
+    </block>
+    <block wx:elif="{{load_status=='no_data'}}">
+      <view class="no_data info">
+        <image  src="./img/no_data.png" />
+        <view>暂无数据</view>
+      </view>
+    </block>
+    <block wx:else>
+      <slot name="content">
+      </slot>
+    </block>
+  </view>
+  <block wx:if="{{refresh_data_size>10}}">
+    <view class="loadmore">
+      <block wx:if="{{loadmore_status=='init'}}">
+        上推获取更多
+      </block>
+      <block wx:elif="{{loadmore_status=='loading'}}">
+        获取中...
+      </block>
+      <block wx:elif="{{loadmore_status=='load_fail'}}">
+        获取失败
+      </block>
+      <block wx:elif="{{loadmore_status=='no_data'}}">
+        没有更多数据了！
+      </block>
+    </view>
+  </block>
+</scroll-view>
