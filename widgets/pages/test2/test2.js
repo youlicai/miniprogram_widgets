@@ -1,6 +1,7 @@
 // pages/test2/test2.js
-const auth=require("../../utils/auth.js");
-const tool=require("../../utils/tool.js");
+const Auth=require("../../utils/auth.js");
+const Tool=require("../../utils/tool.js");
+var tool=new Tool();
 Page({
 
   /**
@@ -14,11 +15,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    auth.phone(this,'','',function(res){
-      console.log("客户端获取到"+res)
-      tool.setStorageSync("iphone",res)
+
+    tool.vlog("tt",this);
+
+    // var object={}
+    // object.test1="1";
+    // object.test2="2";
+    // object.test2="3";
+    // tool.setStorageSync("test", object);
+
+    var auth=new Auth();
+    auth.login(this,function(res){
+      tool.vlog("客户端获取到"+res)
     },function(msg){
-      console.log(msg+'dddd')
+      tool.vlog(msg+'dddd')
     });
 
     // auth.auth(this,function(res){
