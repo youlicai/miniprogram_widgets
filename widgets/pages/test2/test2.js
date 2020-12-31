@@ -90,5 +90,8 @@ Page({
   },
   left_click:function(){
     tool.vlog("hello");
+  },
+  center_double_click:function(e){
+    tool.vlog("center_double_click");
   }
 })

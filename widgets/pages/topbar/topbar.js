@@ -66,6 +66,7 @@ Component({
       var now=e.timeStamp
       if(now-this.data._clicktime>400){
         this.data._clicktime=now;
+        this.triggerEvent('center_one_click');
       }else{
         this.triggerEvent('center_double_click');
       }

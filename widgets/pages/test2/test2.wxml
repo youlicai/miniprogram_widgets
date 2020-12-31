@@ -1,3 +1,3 @@
 <!--pages/test2/test2.wxml-->
-<topbar show_left_img="{{false}}" show_left_text="{{true}}" center_text="{{'Hello'}}" left_text="{{'返回'}}" bind:left_click="left_click"></topbar>
+<topbar show_left_img="{{true}}" show_left_text="{{true}}" center_text="{{'Hello'}}" left_text="{{'返回'}}" bind:left_click="left_click" bind:center_double_click="center_double_click"></topbar>
 <text>pages/test2/test2.wxml</text>
