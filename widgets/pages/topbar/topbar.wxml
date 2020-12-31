@@ -17,7 +17,7 @@
       </block>
 
       <div class="center"
-        style="height:{{navbar_height-navbar_height/5}}px;margin:{{navbar_height/10}}px;line-height:{{navbar_height-navbar_height/5}}px;font-size:{{navbar_height/2.7}}px">
+        style="height:{{navbar_height-navbar_height/5}}px;margin:{{navbar_height/10}}px;line-height:{{navbar_height-navbar_height/5}}px;font-size:{{navbar_height/2.7}}px" bindtap="center_double_click">
         {{center_text}}
       </div>
     </view>

@@ -46,7 +46,8 @@ Component({
   data: {
     statusbar_height:0,
     navbar_height:0,
-    navbar_width:1.6
+    navbar_width:1.6,
+    _clicktime:0
   },
 
   ready() {
@@ -58,8 +59,16 @@ Component({
     })
   },
   methods: {
-    left_click(){
+    left_click(e){
       this.triggerEvent('left_click');
+    },
+    center_double_click(e){
+      var now=e.timeStamp
+      if(now-this.data._clicktime>400){
+        this.data._clicktime=now;
+      }else{
+        this.triggerEvent('center_double_click');
+      }
     }
   },
 })
