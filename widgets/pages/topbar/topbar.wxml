@@ -1,0 +1,25 @@
+<view style="height:{{statusbar_height+navbar_height}}px;width:100%;">
+  <view class="topbar" style="height:{{statusbar_height+navbar_height}}px;width:100%;">
+    <view style="height:{{statusbar_height}}px;background-color:{{bg_color}};width:100%;"></view>
+    <view
+      style="height:{{navbar_height}}px;background-color:{{bg_color}};width:100%;display:block;vertical-align:middle">
+      <block wx:if="{{!left_close}}">
+        <div class="left"
+          style="height:{{navbar_height-navbar_height/5}}px;width:{{navbar_height*navbar_width-navbar_height/5}}px;margin:{{navbar_height/10}}px;line-height:{{navbar_height-navbar_height/5}}px;font-size:{{navbar_height/3}}px;" bindtap="left_click">
+          <block wx:if="{{show_left_img}}">
+            <image src="./img/nav_back_icon.png"
+              style="width:{{navbar_height/2}}px;height:{{navbar_height/2}}px;top:{{(navbar_height-navbar_height/2)/4}}px" />
+          </block>
+          <block wx:if="{{show_left_text}}">
+            {{left_text}}
+          </block>
+        </div>
+      </block>
+
+      <div class="center"
+        style="height:{{navbar_height-navbar_height/5}}px;margin:{{navbar_height/10}}px;line-height:{{navbar_height-navbar_height/5}}px;font-size:{{navbar_height/2.7}}px">
+        {{center_text}}
+      </div>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,26 @@
+/* pages/topbar/topbar.wxss */
+
+.topbar{
+  position: absolute;
+  top:0px;
+}
+.topbar .left{
+  float: left;
+  display:block;
+  position:fixed;
+  color:#fff;
+  text-align:center;
+}
+.topbar .left image{
+  position: relative;
+}
+
+.topbar .center{
+  float: left;
+  width:30%;
+  display:block;
+  text-align:center;
+  position:fixed;
+  left:35%;
+  color:#fff;
+}

@@ -5,16 +5,6 @@ var Tool = function () {
   this.W = 1;
   this.E = 2;
   this.get = function (action, req_data, doSucc, doFail, doComplete) {
-    if (!(req_data == '' || req_data == null)) {
-      try {
-        var res = wx.getStorageSync('cur_wh')
-        if (res) {
-          req_data.whId = res['whId']
-        }
-      } catch (e) {}
-      req_data.userId = 101
-    }
-
     var params = "";
     var k;
     for (k in req_data) {

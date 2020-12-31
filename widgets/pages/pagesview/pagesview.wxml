@@ -1,0 +1,11 @@
+
+  <swiper class="swiper" circular="true" current="0" bindchange='onSlideChangeEnd'>
+    <slot name="item">
+
+  </slot>
+    <!-- <swiper-item class="swiper_item" wx:for="{{list}}" wx:key="key">
+
+    </swiper-item> -->
+  </swiper>
+
+

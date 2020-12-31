@@ -31,6 +31,7 @@ Page({
       tool.vlog(msg+'dddd')
     });
 
+
     // auth.auth(this,function(res){
     //   console.log("客户端获取到"+res)
     //   tool.setStorageSync("iphone",res)
@@ -86,5 +87,8 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  left_click:function(){
+    tool.vlog("hello");
   }
 })
