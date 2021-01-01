@@ -2,7 +2,6 @@
   "pages": [
     "pages/test2/test2",
     "pages/topbar/topbar",
-
     "pages/test/test",
     "pages/refresh_more/refresh_more",
     "pages/index/index",
@@ -15,9 +14,7 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle": "black",
-
     "navigationStyle": "custom"
-
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

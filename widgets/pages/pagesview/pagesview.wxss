@@ -1,1 +1,7 @@
 /* pages/pagesview/pagesview.wxss */
+
+text{
+  width:20vw;
+  height: 15vw;
+  background-color: red;
+}

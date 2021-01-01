@@ -1,0 +1,10 @@
+
+<view bindtap="click"
+  style="width:{{width}}vw;height:{{height}}vw;background-color:{{bg_color}};color:{{font_color}};font-size:{{width/5}}vw;border-radius:{{radius}}vw;line-height:{{height}}vw;text-align:center;">
+  <block wx:if="{{is_init}}">
+    {{init_txt}}
+  </block>
+  <block wx:else>
+    {{count}}
+  </block>
+</view>

@@ -1,6 +1,7 @@
 {
 
   "usingComponents": {
-    "topbar":"../topbar/topbar"
+    "topbar":"../topbar/topbar",
+    "countdown":"../countdown/countdown"
   }
 }
