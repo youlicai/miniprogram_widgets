@@ -69,6 +69,7 @@ Component({
         this.triggerEvent('center_one_click');
       }else{
         this.triggerEvent('center_double_click');
+        this.data._clicktime=0;
       }
     }
   },
