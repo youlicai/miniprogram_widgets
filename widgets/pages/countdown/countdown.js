@@ -72,7 +72,7 @@ Component({
       })
       var that = this;
       var interval = setInterval(function () {
-        if (that.data.count == 0) {
+        if (that.data.count == 1) {
           clearInterval(interval)
           that.setData({
             count: that.data.total_num,
