@@ -65,6 +65,7 @@ Component({
       if (!this.data._click_enable) {
         return;
       }
+      this.triggerEvent('downclick');
       console.log("send");
       this.setData({
         is_init: false,
